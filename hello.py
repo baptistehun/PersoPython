@@ -1,4 +1,8 @@
 def mini(tableau):
+    """
+    :param tableau: liste
+    :return: le minimum
+    """
     min = tableau[0]
     for i in range(len(tableau)):
         if min > tableau[i]:
@@ -7,6 +11,10 @@ def mini(tableau):
 
 
 def maxi(tableau):
+    """
+    :param tableau: liste
+    :return: le maximum
+    """
     max = tableau[0]
     for i in range(len(tableau)):
         if max < tableau[i]:
@@ -15,6 +23,10 @@ def maxi(tableau):
 
 
 def somme(tableau):
+    """
+    :param tableau: liste
+    :return: la somme de la liste
+    """
     sommeloc = 0
     for i in range(len(tableau)):
         sommeloc += tableau[i]
@@ -22,13 +34,17 @@ def somme(tableau):
 
 
 def average(tableau):
+    """
+    :param tableau: liste
+    :return: la valeur moyenne de la liste
+    """
     averageloc = somme(tableau) / len(tableau)
     return averageloc
 
 
 def isPrime(n):
     """
-    :param n: integer
+    :param n: entier
     :return: Boolean, True for prime number, False for !prime number
     """
     b = True
@@ -42,6 +58,10 @@ def isPrime(n):
 
 
 def getPrimeNumber(tableau):
+    """
+    :param tableau: liste d'entier
+    :return: liste des entier premiers
+    """
     tableauLoc = []
     for i in range(len(tableau)):
         if isPrime(tableau[i]):
@@ -50,6 +70,10 @@ def getPrimeNumber(tableau):
 
 
 def factorielle(n):
+    """
+    :param n: entier
+    :return: la factorielle de n
+    """
     if n < 2:
         return 1
     else:
@@ -58,6 +82,10 @@ def factorielle(n):
 
 
 def inverse(tableau):
+    """
+    :param tableau: liste
+    :return: une nouvelle liste inverse de celle d'entrée
+    """
     tableauloc = []
     n = len(tableau) - 1
     for i in range(n+1):
@@ -66,6 +94,10 @@ def inverse(tableau):
 
 
 def inverse2(tableau):
+    """
+    :param tableau: liste
+    :return: la liste d'entrée inversée
+    """
     n = len(tableau) - 1
     for i in range(n+1):
         tableau.append(tableau[n-i])
@@ -75,6 +107,7 @@ def inverse2(tableau):
 
 if __name__ == '__main__':
     table = [1, 2, 3, 5, 7, 8, 9, 11, 5]
+    print(somme(table))
     print(getPrimeNumber(table))
     print(inverse(table))
     print(table)
